@@ -1,0 +1,311 @@
+{
+  "text_classification": {
+    "accuracy": 0.84,
+    "precision": 1.0,
+    "recall": 0.7333333333333333,
+    "f1_score": 0.846153846153846,
+    "results": [
+      {
+        "text": "Hello! Have a great day!",
+        "true_label": 0,
+        "predicted": 0,
+        "threat_level": "safe",
+        "score": 0.001,
+        "correct": true
+      },
+      {
+        "text": "Thank you for your help!",
+        "true_label": 0,
+        "predicted": 0,
+        "threat_level": "safe",
+        "score": 0.001,
+        "correct": true
+      },
+      {
+        "text": "This is a wonderful product",
+        "true_label": 0,
+        "predicted": 0,
+        "threat_level": "safe",
+        "score": 0.001,
+        "correct": true
+      },
+      {
+        "text": "I love learning new things",
+        "true_label": 0,
+        "predicted": 0,
+        "threat_level": "safe",
+        "score": 0.001,
+        "correct": true
+      },
+      {
+        "text": "Great work on the project",
+        "true_label": 0,
+        "predicted": 0,
+        "threat_level": "safe",
+        "score": 0.001,
+        "correct": true
+      },
+      {
+        "text": "The weather is nice today",
+        "true_label": 0,
+        "predicted": 0,
+        "threat_level": "safe",
+        "score": 0.001,
+        "correct": true
+      },
+      {
+        "text": "Can you help me with this?",
+        "true_label": 0,
+        "predicted": 0,
+        "threat_level": "safe",
+        "score": 0.001,
+        "correct": true
+      },
+      {
+        "text": "I appreciate your time",
+        "true_label": 0,
+        "predicted": 0,
+        "threat_level": "safe",
+        "score": 0.001,
+        "correct": true
+      },
+      {
+        "text": "This looks interesting",
+        "true_label": 0,
+        "predicted": 0,
+        "threat_level": "safe",
+        "score": 0.001,
+        "correct": true
+      },
+      {
+        "text": "Have a wonderful weekend",
+        "true_label": 0,
+        "predicted": 0,
+        "threat_level": "safe",
+        "score": 0.001,
+        "correct": true
+      },
+      {
+        "text": "You are stupid and worthless",
+        "true_label": 1,
+        "predicted": 1,
+        "threat_level": "high",
+        "score": 0.987,
+        "correct": true
+      },
+      {
+        "text": "I hate you so much",
+        "true_label": 1,
+        "predicted": 1,
+        "threat_level": "high",
+        "score": 0.93,
+        "correct": true
+      },
+      {
+        "text": "You're an idiot",
+        "true_label": 1,
+        "predicted": 1,
+        "threat_level": "high",
+        "score": 0.986,
+        "correct": true
+      },
+      {
+        "text": "Go away, nobody likes you",
+        "true_label": 1,
+        "predicted": 1,
+        "threat_level": "high",
+        "score": 0.704,
+        "correct": true
+      },
+      {
+        "text": "You suck at everything",
+        "true_label": 1,
+        "predicted": 1,
+        "threat_level": "high",
+        "score": 0.996,
+        "correct": true
+      },
+      {
+        "text": "You're disgusting",
+        "true_label": 1,
+        "predicted": 1,
+        "threat_level": "high",
+        "score": 0.98,
+        "correct": true
+      },
+      {
+        "text": "I hope you fail",
+        "true_label": 1,
+        "predicted": 1,
+        "threat_level": "high",
+        "score": 0.755,
+        "correct": true
+      },
+      {
+        "text": "You're pathetic and dumb",
+        "true_label": 1,
+        "predicted": 1,
+        "threat_level": "high",
+        "score": 0.984,
+        "correct": true
+      },
+      {
+        "text": "Nobody wants you here",
+        "true_label": 1,
+        "predicted": 0,
+        "threat_level": "safe",
+        "score": 0.146,
+        "correct": false
+      },
+      {
+        "text": "You're trash",
+        "true_label": 1,
+        "predicted": 1,
+        "threat_level": "high",
+        "score": 0.979,
+        "correct": true
+      },
+      {
+        "text": "I will hurt you",
+        "true_label": 1,
+        "predicted": 1,
+        "threat_level": "high",
+        "score": 0.84,
+        "correct": true
+      },
+      {
+        "text": "You better watch out",
+        "true_label": 1,
+        "predicted": 0,
+        "threat_level": "safe",
+        "score": 0.126,
+        "correct": false
+      },
+      {
+        "text": "I know where you live",
+        "true_label": 1,
+        "predicted": 0,
+        "threat_level": "safe",
+        "score": 0.054,
+        "correct": false
+      },
+      {
+        "text": "I'll make you pay for this",
+        "true_label": 1,
+        "predicted": 1,
+        "threat_level": "medium",
+        "score": 0.621,
+        "correct": true
+      },
+      {
+        "text": "You're going to regret this",
+        "true_label": 1,
+        "predicted": 0,
+        "threat_level": "safe",
+        "score": 0.09,
+        "correct": false
+      }
+    ],
+    "confusion_matrix": {
+      "tp": 11,
+      "tn": 10,
+      "fp": 0,
+      "fn": 4
+    }
+  },
+  "url_classification": {
+    "accuracy": 0.9,
+    "precision": 1.0,
+    "recall": 0.8,
+    "f1_score": 0.888888888888889,
+    "results": [
+      {
+        "url": "https://www.google.com",
+        "true_label": 0,
+        "predicted": 0,
+        "threat_level": "safe",
+        "score": 0.0,
+        "correct": true
+      },
+      {
+        "url": "https://github.com",
+        "true_label": 0,
+        "predicted": 0,
+        "threat_level": "safe",
+        "score": 0.0,
+        "correct": true
+      },
+      {
+        "url": "https://stackoverflow.com",
+        "true_label": 0,
+        "predicted": 0,
+        "threat_level": "safe",
+        "score": 0.0,
+        "correct": true
+      },
+      {
+        "url": "https://www.wikipedia.org",
+        "true_label": 0,
+        "predicted": 0,
+        "threat_level": "safe",
+        "score": 0.0,
+        "correct": true
+      },
+      {
+        "url": "https://www.youtube.com",
+        "true_label": 0,
+        "predicted": 0,
+        "threat_level": "safe",
+        "score": 0.0,
+        "correct": true
+      },
+      {
+        "url": "http://login-verify-account.tk",
+        "true_label": 1,
+        "predicted": 1,
+        "threat_level": "high",
+        "score": 0.75,
+        "correct": true
+      },
+      {
+        "url": "http://192.168.1.1/admin.php",
+        "true_label": 1,
+        "predicted": 1,
+        "threat_level": "medium",
+        "score": 0.55,
+        "correct": true
+      },
+      {
+        "url": "http://paypal-security-update.com/verify",
+        "true_label": 1,
+        "predicted": 0,
+        "threat_level": "low",
+        "score": 0.45,
+        "correct": false
+      },
+      {
+        "url": "http://free-download-virus.ml",
+        "true_label": 1,
+        "predicted": 1,
+        "threat_level": "high",
+        "score": 0.75,
+        "correct": true
+      },
+      {
+        "url": "http://click-here-now.xyz/login",
+        "true_label": 1,
+        "predicted": 1,
+        "threat_level": "high",
+        "score": 0.75,
+        "correct": true
+      }
+    ],
+    "confusion_matrix": {
+      "tp": 4,
+      "tn": 5,
+      "fp": 0,
+      "fn": 1
+    }
+  },
+  "timestamp": "2026-01-25 23:47:02"
+}

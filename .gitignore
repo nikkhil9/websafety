@@ -1,0 +1,85 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+env/
+.venv
+
+# Node
+node_modules/
+/build
+.DS_Store
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Model files (TOO LARGE for GitHub)
+ml-service/models/websafety-text-v*/pytorch_model.bin
+ml-service/models/websafety-text-v*/model.safetensors
+ml-service/models/websafety-text-v*/checkpoint-*/
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+
+# Dataset files (large)
+*.jsonl
+ml-service/dataset/*.jsonl
+ml-service/dataset/collectors/*.jsonl
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~.nib
+
+# ZIP files
+*.zip
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Coverage
+coverage/
+.nyc_output
+
+# Build
+dist/
+build/
+
+# Kaggle notebooks
+fine_tuning.ipynb
+
+# Large research assets
+research_figures/
+LATEX_VISUALS_GUIDE.md
+
+# Downloaded models cache
+ml-service/.cache/

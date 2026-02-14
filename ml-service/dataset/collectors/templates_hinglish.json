@@ -1,0 +1,94 @@
+{
+  "safe": [
+    "Yaar, ye movie bahut acchi thi!",
+    "Kal milte hain na college mein",
+    "Mummy ne jo khana banaya ekdum mast hai",
+    "Delhi ki garmi toh had se zyada hai",
+    "Happy birthday bro, mast enjoy kar",
+    "Weekend ka kya plan hai?",
+    "Match kaisa chal raha hai apna?",
+    "Result kab aa rahe hain yaar?",
+    "Lunch  time pe canteen milte hain",
+    "Trailer dekha kya? Kaafi badhiya hai",
+    "Chai peene chalte hain",
+    "Assignment ho gaya tera?",
+    "Family ke saath shopping ja raha hoon",
+    "Hostel ka khana waahil bad hai",
+    "Sunday ko long drive chalte hain",
+    "Library mein padhne chalein?",
+    "Shaam ko cricket khelne chalte hain",
+    "Party mein kaun aa raha hai?",
+    "Project almost complete ho gaya",
+    "Vacation plan final kiya kya?",
+    "Bus ka time kya hai bhai?",
+    "Padhai kaisi chal rahi hai?",
+    "Movie tickets book kar liye?",
+    "Dinner mein kya khayenge?",
+    "Dosto ke saath maza aa gaya",
+    "Fest bahut enjoy kiya"
+  ],
+  "cyberbullying": [
+    "Tu bilkul worst hai yaar",
+    "Koi tera friend nahi banega loser",
+    "Sab tere pe haste hain behind your back",
+    "Tu complete failure hai",
+    "Itna ugly hai koi dekhega bhi nahi",
+    "Kitna bhi try kar waste ho tum",
+    "Bevakoof, koi nahi rehna chahta tere saath",
+    "Bahut boring and useless hai tu",
+    "Group mein tu unnecessary hai",
+    "Koi baat nahi karta tere se",
+    "Kitne stupid decisions lete ho",
+    "Tere photos bahut cringe hain",
+    "Block kar raha hoon tujhe",
+    "Teri awaaz irritating hai"
+  ],
+  "hate_speech": [
+    "Tumhare religion wale sab problems create karte hain",
+    "Is community ke log acche nahi hote",
+    "Tumhari caste mein koi bharose layak nahi",
+    "Yahan tumhare liye jagah nahi hai",
+    "Tumhare log sab criminals hain",
+    "Pure desi log hi acche hote hain",
+    "Baaki logon ko accept nahi karna chahiye",
+    "Traditional values maintain karni chahiye, badlav nahi chahiye"
+  ],
+  "sexual_content": [
+    "Photo bhejo na baby",
+    "Tum bahut hot lag rahi ho",
+    "Raat ko milte hain privacy mein",
+    "Pics send karo please",
+    "Tumhara figure kamal ka hai, aur dikhao",
+    "Private baat karein kya?"
+  ],
+  "violence": [
+    "Maar dunga tujhe",
+    "Usko peetna chahiye",
+    "Physical attack karna hoga",
+    "Agli baar gira dunga",
+    "Fight ke liye ready reh"
+  ],
+  "self_harm": [
+    "Zindagi bekaar lag rahi hai",
+    "Ab jeene ka mann nahi kar raha",
+    "Kisi ko interest nahi hai mujhmein",
+    "Sab khatam kar dena chahiye"
+  ],
+  "phishing": [
+    "Aapka account block ho gaya hai, turant verify karein",
+    "Aapko prize mila hai! Abhi claim karein",
+    "Bank details update karo urgent",
+    "Free recharge pao, is link pe click karo"
+  ],
+  "threat": [
+    "Dekh lena tujhe",
+    "Pata hai mujhe tera address sab kuch",
+    "Pachta ega wait kar",
+    "Tera family safe nahi hai"
+  ],
+  "malware": [
+    "Free app download karo unlimited features ke liye",
+    "System slow hai, ye optimizer install karo",
+    "Antivirus update chahiye, install karo"
+  ]
+}

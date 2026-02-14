@@ -1,0 +1,7 @@
+{
+  "malware": 0,
+  "phishing": 1,
+  "safe": 2,
+  "spam": 3,
+  "suspicious": 4
+}

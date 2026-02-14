@@ -1,0 +1,14 @@
+{
+  "test_accuracy": 0.9844444444444445,
+  "val_accuracy": 0.9940740740740741,
+  "categories": [
+    "malware",
+    "phishing",
+    "safe",
+    "spam",
+    "suspicious"
+  ],
+  "train_samples": 6300,
+  "val_samples": 1350,
+  "test_samples": 1350
+}

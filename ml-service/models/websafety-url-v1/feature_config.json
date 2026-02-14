@@ -1,0 +1,28 @@
+{
+  "feature_names": [
+    "url_length",
+    "domain_length",
+    "path_length",
+    "subdomain_count",
+    "has_https",
+    "has_ip",
+    "suspicious_tld",
+    "special_char_count",
+    "digit_count",
+    "is_shortener",
+    "has_suspicious_keywords",
+    "domain_entropy",
+    "path_entropy",
+    "dot_count",
+    "hyphen_count",
+    "has_port",
+    "query_param_count",
+    "has_double_slash",
+    "digit_ratio",
+    "special_char_ratio"
+  ],
+  "n_features": 20,
+  "model_type": "RandomForest",
+  "n_estimators": 200,
+  "max_depth": 15
+}

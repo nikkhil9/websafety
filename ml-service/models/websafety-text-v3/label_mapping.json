@@ -1,0 +1,9 @@
+{
+  "safe": 0,
+  "phishing": 1,
+  "malware": 2,
+  "hate_speech": 3,
+  "cyberbullying": 4,
+  "sexual_content": 5,
+  "violence": 6
+}
