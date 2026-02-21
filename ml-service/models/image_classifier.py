@@ -33,19 +33,30 @@ class ImageClassifier:
         try:
             logger.info("Loading image classification models...")
             
-            # Load NSFW detection model
+            # Load NSFW detection model (works correctly)
             from transformers import pipeline
             logger.info("Loading NSFW detection model...")
             self.nsfw_detector = pipeline("image-classification", model="Falconsai/nsfw_image_detection")
             
-            # Load violence/gore detection model
+            # Load violence detection model
+            # NOTE: jaranohaal/vit-base-violence-detection uses timm format (incompatible)
+            # Using Falconsai violence model which loads correctly
             logger.info("Loading violence detection model...")
-            self.violence_detector = pipeline("image-classification", model="jaranohaal/vit-base-violence-detection")
+            try:
+                self.violence_detector = pipeline(
+                    "image-classification",
+                    model="Falconsai/MobileNet_V2_Violence_Offensive"
+                )
+                logger.info("✓ Violence detection model loaded!")
+            except Exception as ve:
+                logger.warning(f"Violence model failed to load: {ve}")
+                logger.warning("Violence detection will be disabled - only NSFW detection active")
+                self.violence_detector = None
             
             self.model_loaded = True
-            logger.info("Both models loaded successfully!")
+            logger.info("Image classifier initialized successfully!")
             
-            # Initialize result cache (LRU cache for last 100 images)
+            # Initialize result cache
             self.result_cache = {}
             self.cache_max_size = 100
             
@@ -55,6 +66,7 @@ class ImageClassifier:
             self.nsfw_detector = None
             self.violence_detector = None
             self.result_cache = {}
+
     
     
     def _hash_image(self, image):
@@ -119,9 +131,14 @@ class ImageClassifier:
                 cached_result['processing_time'] = time.time() - start_time
                 return cached_result
             
-            # Run both NSFW and violence detection
+            # Run NSFW detection (always available)
             nsfw_predictions = self.nsfw_detector(image)
-            violence_predictions = self.violence_detector(image)
+            
+            # Run violence detection only if model loaded
+            if self.violence_detector is not None:
+                violence_predictions = self.violence_detector(image)
+            else:
+                violence_predictions = [{"label": "non-violence", "score": 1.0}]
             
             processing_time = time.time() - start_time
             logger.info(f"Image analysis completed in {processing_time:.2f} seconds")

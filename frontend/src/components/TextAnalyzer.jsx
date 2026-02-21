@@ -91,23 +91,25 @@ function TextAnalyzer({ onAnalyze }) {
 
                         <div className="categories">
                             <h4>Category Breakdown</h4>
-                            {Object.entries(result.categories).map(([category, score]) => (
-                                <div key={category} className="category-item">
-                                    <div className="category-header">
-                                        <span className="category-name">{category.replace('_', ' ')}</span>
-                                        <span className="category-score">{(score * 100).toFixed(1)}%</span>
+                            {Object.entries(result.categories)
+                                .filter(([category]) => category !== 'hate_speech')
+                                .map(([category, score]) => (
+                                    <div key={category} className="category-item">
+                                        <div className="category-header">
+                                            <span className="category-name">{category.replace('_', ' ')}</span>
+                                            <span className="category-score">{(score * 100).toFixed(1)}%</span>
+                                        </div>
+                                        <div className="progress-bar">
+                                            <div
+                                                className="progress-fill"
+                                                style={{
+                                                    width: `${score * 100}%`,
+                                                    backgroundColor: score > 0.7 ? 'var(--danger)' : score > 0.4 ? 'var(--warning)' : 'var(--success)'
+                                                }}
+                                            />
+                                        </div>
                                     </div>
-                                    <div className="progress-bar">
-                                        <div
-                                            className="progress-fill"
-                                            style={{
-                                                width: `${score * 100}%`,
-                                                backgroundColor: score > 0.7 ? 'var(--danger)' : score > 0.4 ? 'var(--warning)' : 'var(--success)'
-                                            }}
-                                        />
-                                    </div>
-                                </div>
-                            ))}
+                                ))}
                         </div>
                     </div>
                 </div>

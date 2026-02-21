@@ -88,20 +88,29 @@ class TextClassifier:
                 predicted_class = probs.argmax(-1).item()
                 category = self.id2label[predicted_class]
                 
+                # CONFIDENCE THRESHOLD: if model is uncertain, treat as safe
+                # This prevents false positives like "hello" being flagged as hate speech
+                # Model needs >75% confidence to flag as threat
+                CONFIDENCE_THRESHOLD = 0.75
+                if category != "safe" and confidence < CONFIDENCE_THRESHOLD:
+                    logger.info(f"Low confidence ({confidence:.2f}) for '{category}' - defaulting to safe")
+                    category = "safe"
+                    confidence = 1.0 - confidence  # safe confidence is the inverse
+                
                 # Determine safety
                 is_safe = category == "safe"
                 
                 # Map to threat level
                 if is_safe:
                     threat_level = "safe"
-                elif confidence > 0.7:
+                elif confidence > 0.85:
                     threat_level = "high"
-                elif confidence > 0.5:
+                elif confidence > 0.70:
                     threat_level = "medium"
                 else:
                     threat_level = "low"
                 
-                # Get top 3 predictions for categories display
+                # Get all predictions for categories display
                 top_probs, top_indices = torch.topk(probs[0], min(len(self.id2label), 7))
                 
                 # Create categories dict for frontend
@@ -110,8 +119,18 @@ class TextClassifier:
                     cat_name = self.id2label[idx.item()]
                     categories[cat_name] = float(prob.item())
                 
-                # Map confidence to overall_score for frontend compatibility
-                overall_score = confidence
+                # CYBERBULLYING OVERRIDE: even if overall confidence is low,
+                # flag as suspicious if cyberbullying score > 30%
+                cyberbullying_score = categories.get('cyberbullying', 0.0)
+                if is_safe and cyberbullying_score > 0.30:
+                    logger.info(f"Cyberbullying score {cyberbullying_score:.2f} > 30% - flagging as suspicious")
+                    is_safe = False
+                    category = "cyberbullying"
+                    confidence = cyberbullying_score
+                    threat_level = "medium"
+                
+                # overall_score: threat score (0 if safe)
+                overall_score = 0.0 if is_safe else confidence
                 
                 return {
                     "is_safe": is_safe,
